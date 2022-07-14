@@ -17,9 +17,9 @@
 
 ## 📝 Table des matières
 
-- [About](#about)
-- [Built Using](#built_using)
-- [Authors](#authors)
+- [À propos de](#about)
+- [Construit en utilisant](#built_using)
+- [Auteurs](#authors)
 
 ## 🧐 À propos de <a name = "about"></a>
 
