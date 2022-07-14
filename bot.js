@@ -5,6 +5,7 @@ require('moment').locale('FR');
 ['commands', 'cooldowns', 'button'].forEach(x => bot[x] = new Collection());
 
 bot.config = require('./config/config')
+bot.util = require('./utils/util')
 bot.logs = (embed) => {
     if(bot.config.logs.enabled) {
         const channel = bot.channels.cache.get(bot.config.logs.channel);

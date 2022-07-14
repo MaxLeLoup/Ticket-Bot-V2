@@ -17,13 +17,13 @@ module.exports.run = async(bot, message, args) => {
     const command = bot.commands.get(args[0]) || bot.commands.find(cmd => cmd.help.aliases && cmd.help.aliases.includes(args[0]));
     if (!command) return message.reply("Cette commande n'existe pas !");
 
-    const embed = new MessageEmbed()
-    .setColor("BLUE")
-    .setTitle(`${command.help.name}`)
-    .addField("Description", `${command.help.description} (Cooldown: ${command.help.cooldown} secondes)`)
-    .addField("Usage", command.help.usage ? `${PREFIX}${command.help.name} ${command.help.usage}` : `${PREFIX}${command.help.name}`, true)
+    const embed = {
+      title: `${command.help.name}`,
+      description: `${command.help.description}`,
+      fields: [{name: "Usage", value: `${command.help.usage ? `${PREFIX}${command.help.name} ${command.help.usage}` : `${PREFIX}${command.help.name}`}`, inline: true}, {name: "Cooldown", value: `${command.help.cooldown} seconde${command.help.cooldown > 1 ? 's' : ''}`, inline: true}, {name: "Categorie", value: `${command.help.category}`, inline: true}, {name: "Aliases", value: `${command.help.aliases ? command.help.aliases.join(', ') : 'Aucun'}`, inline: true}, {name: "Seulement pour les owners", value: `${command.help.ownerOnly ? 'Oui' : 'Non'}`, inline: true}, {name: "\u200b", value: `\u200b`, inline: true}, {name: "Permission utilisateur", value: `${command.help.permission ? command.help.userPermissions.map(perm => `\`${bot.util.Permissions[perm]}\``).join(', ') : 'Aucune'}`, inline: true}, {name: "Permission bot", value: `${command.help.permission ? command.help.botPermissions.map(perm => `\`${bot.util.Permissions[perm]}\``).join(', ') : 'Aucune'}`, inline: true}
+      ],
+    }
 
-    if (command.help.aliases.length > 1) embed.addField("Alias", `${command.help.aliases.join(', ')}`, true);
     return message.reply({embeds:[embed]});
   }
 };
