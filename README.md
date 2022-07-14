@@ -16,7 +16,7 @@
     <br> 
 </p>
 
-## 📝 Table of Contents
+## 📝 Table des matières
 
 - [About](#about)
 - [Built Using](#built_using)
