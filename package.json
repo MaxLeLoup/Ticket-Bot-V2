@@ -1,0 +1,19 @@
+{
+  "name": "ticketbotv2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@discordjs/builders": "^0.15.0",
+    "discord-api-types": "^0.36.1",
+    "discord-html-transcripts": "^2.5.8",
+    "discord.js": "^13.8.1",
+    "moment": "^2.29.4"
+  }
+}
