@@ -1,6 +1,5 @@
 <p align="center">
-  <a href="" rel="noopener">
- <img width=200px height=200px src="https://i.imgur.com/FxL5qM0.jpg" alt="Bot logo"></a>
+  <a href="" rel="noopener"><img width=200px height=200px src="https://i.imgur.com/FxL5qM0.jpg" alt="Bot logo"></a>
 </p>
 
 <h3 align="center">Ticket Bot V2</h3>
@@ -24,15 +23,15 @@
 
 ## 🧐 À propos de <a name = "about"></a>
 
-Bot de gestion de tickets 100% configurable.
-❌ - Non multi-serveur.
-✅ - Logs de tickets.
-✅ - Transcription de tickets.
-✅ - Gestion de tickets.
+Bot de gestion de tickets 100% configurable.<br> 
+❌ - Non multi-serveur.<br> 
+✅ - Logs de tickets.<br> 
+✅ - Transcription de tickets.<br> 
+✅ - Gestion de tickets.<br> 
 
-Pour en savoir plus sur le bot, voir la [page d'accueil](../README.md).
-Pour tout problème, vous pouvez me contacter sur le [Github](https://github.com/MaxLeLoup/Ticket-Bot-V2/issues).
-En cas de question, vous pouvez me contacter sur le Discord [Night Group](https://discord.gg/ySbecQPWce).
+Pour en savoir plus sur le bot, voir la [page d'accueil](../README.md).<br> 
+Pour tout problème, vous pouvez me contacter sur le [Github](https://github.com/MaxLeLoup/Ticket-Bot-V2/issues).<br> 
+En cas de question, vous pouvez me contacter sur le Discord <a href="" rel="noopener"><img width=70px height=70px src="https://night-api.com/images/Logo/logo.png" alt="Bot logo"></a>[Night Group](https://discord.gg/ySbecQPWce).
 
 
 ## ⛏️ Construit en utilisant <a name = "built_using"></a>
