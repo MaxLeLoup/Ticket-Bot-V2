@@ -11,7 +11,7 @@
 
 ---
 
-<p align="center"> 🤖 Quelques lignes décrivant ce que fait votre robot.
+<p align="center"> 🤖 Quelques lignes décrivant ce que fait notre robot.
     <br> 
 </p>
 

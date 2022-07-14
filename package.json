@@ -1,14 +1,19 @@
 {
   "name": "ticketbotv2",
   "version": "1.0.0",
-  "description": "",
+  "description": "Ticket Bot V2 est un bot Discord qui permet de gérer les tickets de votre serveur.",
   "main": "bot.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "discord",
+    "bot",
+    "ticket",
+    "support"
+  ],
+  "author": " Night Group & Max & LACOSTAR91",
+  "license": "MIT",
   "dependencies": {
     "@discordjs/builders": "^0.15.0",
     "discord-api-types": "^0.36.1",
