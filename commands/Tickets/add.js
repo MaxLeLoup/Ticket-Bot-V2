@@ -19,7 +19,7 @@ module.exports.run = async(bot, message, args) => {
         ADD_REACTIONS: true,
         ATTACH_FILES: true,
     }).then(() => {
-        bot.logs({title: 'Ajout de membre', description: `${u.user.tag} a été ajouté à ${channel.name} par ${message.author.tag}`, color: [0, 153, 255], timestamp: new Date()})
+        bot.logs({embeds: {title: 'Ajout de membre', description: `${u.user.tag} a été ajouté à ${channel.name} par ${message.author.tag}`, color: [0, 153, 255], timestamp: new Date()}})
         channel.send({ embeds: [{
             description: `${u} a été ajouté au ticket.`,
             color: [0, 153, 255],

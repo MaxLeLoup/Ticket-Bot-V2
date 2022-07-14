@@ -13,7 +13,7 @@ module.exports.run = async(bot, message, args) => {
     if(u.id === bot.user.id) {return await message.reply({ embeds: [{description: 'Je ne peux pas m\'ajouter à un ticket.', color: [255, 0, 0]}]});}
     if(!channel.permissionOverwrites.cache.get(u.id)) {return await message.reply({ embeds: [{description: 'Ce membre est déjà dans ce ticket.', color: [255, 0, 0]}]});}
 
-    bot.logs({title: 'Suppression d\'un membre', color: '#0099ff', description: `${message.author.tag} (${message.author.id}) a supprimé ${u.user.tag} (${u.user.id}) du ticket ${channel.name} (${channel.id})`, timestamp: new Date(), color: 'ORANGE'})
+    bot.logs({embeds: {title: 'Suppression d\'un membre', color: '#0099ff', description: `${message.author.tag} (${message.author.id}) a supprimé ${u.user.tag} (${u.user.id}) du ticket ${channel.name} (${channel.id})`, timestamp: new Date(), color: 'ORANGE'}})
     channel.permissionOverwrites.delete(u.id).then(() => {
         channel.send({ embeds: [{
             description: `${u} a été retiré au ticket.`,

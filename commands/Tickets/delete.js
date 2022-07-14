@@ -7,7 +7,7 @@ module.exports.run = async(bot, message, args) => {
     if(!channel.name.startsWith(`closed-${topic}`)) {return await message.reply({ embeds: [{description: 'Vous ne pouvez pas fermer ce ticket.', color: [255, 0, 0]}]});}
     
     message.reply({ embeds: [{description: 'Le ticket sera supprimé dans quelques secondes.', color: [0, 153, 255]}]});
-    bot.logs({title: 'Ticket supprimé', color: '#0099ff', description: `${message.author.tag} (${message.author.id}) a supprimé le ticket ${channel.name} (${channel.id})\n\nOuvert par <@${topic}>`, timestamp: new Date(), color: 'RED'})
+    bot.logs({embeds: {title: 'Ticket supprimé', color: '#0099ff', description: `${message.author.tag} (${message.author.id}) a supprimé le ticket ${channel.name} (${channel.id})\n\nOuvert par <@${topic}>`, timestamp: new Date(), color: 'RED'}})
     setTimeout(() => {
         channel.delete().catch(err => {
             message.reply({ embeds: [{description: 'Une erreur est survenue lors de la suppression du ticket.', color: [255, 0, 0] }], ephermal: true });

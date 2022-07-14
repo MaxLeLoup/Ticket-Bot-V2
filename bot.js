@@ -10,7 +10,11 @@ bot.logs = (embed) => {
     if(bot.config.logs.enabled) {
         const channel = bot.channels.cache.get(bot.config.logs.channel);
         if(channel) {
-            channel.send({ embeds: [embed] });
+            if(embed.files) {
+                channel.send({ embeds: [embed.embeds], files: [embed.files.attachment] });
+            } else {
+                channel.send({ embeds: [embed.embeds] });
+            }
         } else {
             console.log(`[\x1b[31m%s\x1b`, 'LOGS', `\x1b[0m]`, 'Le salon de logs n\'existe pas.')
         }

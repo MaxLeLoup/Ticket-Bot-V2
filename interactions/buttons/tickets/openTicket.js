@@ -21,7 +21,7 @@ module.exports = {
 		rolePermissions.push({id: guild.id, deny: [Object.keys(Permissions.FLAGS)]}, {id: user.id, allow: ['VIEW_CHANNEL', 'SEND_MESSAGES', 'ATTACH_FILES', 'ADD_REACTIONS', 'READ_MESSAGE_HISTORY', 'EMBED_LINKS', 'USE_EXTERNAL_EMOJIS']});
 		
 		guild.channels.create(`ticket-${user.id}`, {type: 'GUILD_TEXT', parent: bot.config.ticket.category, reason: `${user.tag} a ouvert un ticket`, permissionOverwrites: rolePermissions, topic: `User: ${user.id}`}).then(async c => {
-            bot.logs({title: 'Ticket ouvert', description: `Le ticket ${c.name} (${c.id}) a été ouvert par ${user.tag} (${user.id})`, timestamp: new Date(), color: 'GREEN'});
+            bot.logs({embeds: {title: 'Ticket ouvert', description: `Le ticket ${c.name} (${c.id}) a été ouvert par ${user.tag} (${user.id})`, timestamp: new Date(), color: 'GREEN'}});
             await c.send({ content: `<@${user.id}>`, embeds: [{title: 'Ticket', description: `${bot.config.ticket.messageOptions.messageOpened}`, color: [0, 153, 255], footer: {text: `${user.tag}`}}], components: [new ActionRowBuilder().addComponents([new ButtonBuilder({type: ComponentType.Button, label: 'Fermer le ticket', style: ButtonStyle.Danger, emoji: '865272379176648725', customId: 'closeTicket'})]).toJSON()]})
 			await interaction.editReply({ embeds: [{description: `Votre ticket a été ouvert <#${c.id}>`, color: [0, 153, 255],}], ephemeral: true});
 		}).catch(async(err) => {

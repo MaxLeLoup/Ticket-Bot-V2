@@ -13,7 +13,7 @@ module.exports = {
 		if(!channel.name.startsWith(`closed-${topic}`)) {return await interaction.editReply({ embeds: [{description: 'Vous n\'avez pas le droit de supprimer ce ticket.', color: [255, 0, 0]}]});}
 
         interaction.editReply({ embeds: [{description: 'Suppression du ticket dans quelques secondes...', color: [0, 153, 255]}]});
-        bot.logs({title: 'Ticket supprimé', description: `Le ticket ${channel.name} (${channel.id}) a été supprimé par ${user.tag} (${user.id})\n\nOuvert par <@${topic}>`, timestamp: new Date(), color: 'RED'})
+        bot.logs({embeds: {title: 'Ticket supprimé', description: `Le ticket ${channel.name} (${channel.id}) a été supprimé par ${user.tag} (${user.id})\n\nOuvert par <@${topic}>`, timestamp: new Date(), color: 'RED'}})
         setTimeout(async () => {
             channel.delete().catch(err => {
                 console.log(err);

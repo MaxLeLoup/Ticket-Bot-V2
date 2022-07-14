@@ -21,8 +21,8 @@ module.exports.run = async(bot, message, args) => {
     }
 
     await c.edit({name: `closed-${topic}`});
-    bot.logs({title: 'Ticket fermé', description: `Le ticket ${c.name} (${c.id}) a été fermé par ${message.author.tag} (${message.author.id})\n\nOuvert par <@${topic}>`, color: 'ORANGE', timestamp: new Date()})
     const attachment = await discordTranscripts.createTranscript(message.channel);
+    bot.logs({embeds: {title: 'Ticket fermé', description: `Le ticket ${c.name} (${c.id}) a été fermé par ${message.author.tag} (${message.author.id})\n\nOuvert par <@${topic}>`, color: 'ORANGE', timestamp: new Date()}, files: {attachment: attachment}});
     await message.reply({ embeds: [{color: [0, 153, 255], description: `${bot.config.ticket.messageOptions.messageClose}`}], components: [new ActionRowBuilder({components: [new ButtonBuilder({ type: ComponentType.Button, label: 'Supprimer', style: ButtonStyle.Danger, emoji: '🗑', customId: 'deleteTicket'})]}).toJSON()], files: [attachment]});
 
 };
