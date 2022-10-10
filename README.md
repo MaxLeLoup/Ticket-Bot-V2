@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="" rel="noopener"><img width=200px height=200px src="https://night-api.com/images/Logo/logo.png" alt="Bot logo"></a>
+  <a href="" rel="noopener"><img width=200px height=200px src="https://night-api.com/images/logo/logo.png" alt="Bot logo"></a>
 </p>
 
 <h3 align="center">Ticket Bot V2</h3>
