@@ -4,7 +4,7 @@ module.exports = {
 
     status: {
         type: 'STREAMING', //STREAMING, LISTENING, WATCHING, PLAYING
-        url: 'https://twitch.tv/Etinou_', //url du stream seulement si type = STREAMING
+        url: 'https://twitch.tv/OwO_Maxou', //url du stream seulement si type = STREAMING
         stateList: [ // Liste des activité du bot 
             '{user} utilisateurs',
             '{PREFIX}help',
